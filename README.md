@@ -1,8 +1,7 @@
 ![logo](https://user-images.githubusercontent.com/95478989/198955082-6e78ebb5-e1e4-49f9-8d32-6e5af3984dcd.gif)
 <h1 align="center">🚩🚩 Jai Shree Ram 🚩🚩</h1>
-<h3 align="center">I am Vansh Gupta</h3>
-<img align="right" alt="gifimage" width="400" src="https://camo.githubusercontent.com/c1dcb74cc1c1835b1d716f5051499a2814c683c806b15f04b0eba492863703e9/68747470733a2f2f63646e2e6472696262626c652e636f6d2f75736572732f3733303730332f73637265656e73686f74732f363538313234332f6176656e746f2e676966" >
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=goyalvansh4&label=Profile%20views&color=0e75b6&style=flat" alt="goyalvansh4" /> </p>
+<h3 align="center" style="font-size:2.5rem">ℍ𝕚, 𝕄𝕪 ℕ𝕒𝕞𝕖 𝕚𝕤 𝕍𝕒𝕟𝕤𝕙 𝔾𝕦𝕡𝕥𝕒</h3>
+<img align="right" alt="gifimage" width="400" height="250"src="https://camo.githubusercontent.com/c1dcb74cc1c1835b1d716f5051499a2814c683c806b15f04b0eba492863703e9/68747470733a2f2f63646e2e6472696262626c652e636f6d2f75736572732f3733303730332f73637265656e73686f74732f363538313234332f6176656e746f2e676966" >
 
 - 🔭 I’m currently working on **my Web Development Skills**
 
