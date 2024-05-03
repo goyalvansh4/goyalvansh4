@@ -1,18 +1,26 @@
 ![logo](https://user-images.githubusercontent.com/95478989/198955082-6e78ebb5-e1e4-49f9-8d32-6e5af3984dcd.gif)
 <h1 align="center">🚩🚩 Jai Shree Ram 🚩🚩</h1>
 <h3 align="center" style="font-size:2.5rem">ℍ𝕚, 𝕄𝕪 ℕ𝕒𝕞𝕖 𝕚𝕤 𝕍𝕒𝕟𝕤𝕙 𝔾𝕦𝕡𝕥𝕒</h3>
-<img align="right" alt="gifimage" width="400" height="250"src="https://camo.githubusercontent.com/c1dcb74cc1c1835b1d716f5051499a2814c683c806b15f04b0eba492863703e9/68747470733a2f2f63646e2e6472696262626c652e636f6d2f75736572732f3733303730332f73637265656e73686f74732f363538313234332f6176656e746f2e676966" >
+<img align="right" alt="gifimage" width="500" height="300" src="https://camo.githubusercontent.com/0dbe167d7b778f5e825114a095ad46a2c852ba91fc82ec2d4fd8865c67ecd2a1/68747470733a2f2f7777772e61616c7068612e6e65742f77702d636f6e74656e742f75706c6f6164732f323032302f31322f66756c6c2d737461636b2d646576656c6f706d656e742e676966" >
 
 - 🔭 I’m currently working on **My Web Development Skills**
 
-- 🌱 I’m currently learning **Javascript**
+- 🌱 I’m currently learning **ReactJs**
 
 - 👨‍💻 All of my projects are available at my [![Portfolio](https://img.shields.io/badge/Portfolio-%2312100E.svg?style=for-the-badge)](https://vanshgupta11.netlify.app/)
 
 - 📫 How to reach me   [![Email](https://img.shields.io/badge/Email-%23D14836.svg?style=for-the-badge&logo=gmail&logoColor=white)](mailto:vanshgupta7668@gmail.com)
 
 
-<h3 align="left">Connect with me:</h3>
+
+
+
+
+
+<h2></h2>
+
+
+<h3 align="left" style="margin-top:70px" >Connect with me:</h3>
 <p align="left">
 
 ## 🌐 Socials:
