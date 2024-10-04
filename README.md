@@ -1,7 +1,7 @@
 ![logo](https://user-images.githubusercontent.com/95478989/198955082-6e78ebb5-e1e4-49f9-8d32-6e5af3984dcd.gif)
 <h1 align="center">🚩🚩 Jai Shree Ram 🚩🚩</h1>
 <h3 align="center" style="font-size:2.5rem">ℍ𝕚, 𝕄𝕪 ℕ𝕒𝕞𝕖 𝕚𝕤 𝕍𝕒𝕟𝕤𝕙 𝔾𝕦𝕡𝕥𝕒</h3>
-<img align="right" alt="gifimage" width="500" height="300" src="https://camo.githubusercontent.com/0dbe167d7b778f5e825114a095ad46a2c852ba91fc82ec2d4fd8865c67ecd2a1/68747470733a2f2f7777772e61616c7068612e6e65742f77702d636f6e74656e742f75706c6f6164732f323032302f31322f66756c6c2d737461636b2d646576656c6f706d656e742e676966" >
+<img align="right" alt="gifimage" width="500" height="300" src="https://camo.githubusercontent.com/0e2953d98b21eda5a158939ea202c7c07b16b0dc0dc5c1e269826c29a01a974f/68747470733a2f2f7777772e77656232347a6f6e652e636f6d2f77702d636f6e74656e742f75706c6f6164732f323032322f31302f34363230372d70726f6772616d6d65722d312e676966" >
 
 - 🔭 I’m currently working on **My Web Development Skills**
 
