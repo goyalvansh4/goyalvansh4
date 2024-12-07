@@ -5,7 +5,7 @@
 
 - 🔭 I’m currently working on **My Web Development Skills**
 
-- 🌱 I’m currently learning **ReactJs**
+- 🌱 I’m currently learning **ExpressJS**
 
 - 👨‍💻 All of my projects are available at my [![Portfolio](https://img.shields.io/badge/Portfolio-%2312100E.svg?style=for-the-badge)](https://vanshgupta11.netlify.app/)
 
