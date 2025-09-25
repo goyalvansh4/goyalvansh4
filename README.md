@@ -38,6 +38,12 @@
 
 ---
 
+## 📊 GitHub Stats:
+[![GitHub Streak](https://git-hub-streak-stats.vercel.app?user=goyalvansh4)](https://git.io/streak-stats)
+![](https://github-readme-stats.vercel.app/api/top-langs/?username=goyalvansh4&include_all_commits=true&count_private=true&layout=compact)
+
+---
+
 ## 💻 Tech Stack:
 <p align="center">
   <img src="https://img.shields.io/badge/JavaScript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/>
@@ -56,11 +62,7 @@
 
 ---
 
-## 📊 GitHub Stats:
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=goyalvansh4&hide_border=true" alt="GitHub Streak" width="48%" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=goyalvansh4&layout=compact&hide_border=true" alt="Top Languages" width="48%" />
-</p>
+
 
 ---
 
