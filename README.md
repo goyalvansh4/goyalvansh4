@@ -66,10 +66,9 @@
 
 ---
 
-## 🏆 GitHub Trophies
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=goyalvansh4&theme=radical&no-frame=true&margin-w=8" alt="GitHub Trophies" />
-</p>
+
+## 🏆GitHub Trophies
+![](https://github-trophies.vercel.app/?username=goyalvansh4&theme=radical&no-frame=false&no-bg=false&margin-w=4)
 
 ---
 
@@ -86,3 +85,10 @@
 ---
 
 <p align="center">✨ *Proudly crafted with passion and precision* ✨</p>
+
+
+
+
+
+
+
