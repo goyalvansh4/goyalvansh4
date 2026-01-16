@@ -32,12 +32,13 @@
 
 <img align="right" width="420" height="300" src="https://res.cloudinary.com/dq7ndlhvf/image/upload/v1768563820/converted_2_cha0ry.gif"/>
 
-I’m a **full-stack engineer** focused on building **scalable, maintainable, and performance-driven systems**.
+I’m a **full-stack engineer** focused on building **scalable, <br/>
+          maintainable, and performance-driven systems**.
 
 - 🔭 Strong emphasis on **engineering best practices**
 - 🌱 Actively studying **system design & distributed systems**
 - 🧠 Prefer **clarity, simplicity, and correctness** over shortcuts
-- ⚙️ Experience across frontend, backend, APIs, and infrastructure
+- ⚙️ Experience across frontend, backend, Devops
 - 🚀 Always learning, always refining fundamentals
 
 <!-- ================= DIVIDER ================= -->
