@@ -82,12 +82,6 @@ I’m a **full-stack engineer** focused on building **scalable, <br/>
   <img src="https://user-images.githubusercontent.com/74038190/216656972-9c6f2e8e-12d7-4a9b-8f07-5aefc6c0b7a6.gif" width="100%" />
 </p>
 
-## 🧬 Contribution Overview
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake-dark.svg" />
-</p>
-
 <!-- ================= DIVIDER ================= -->
 <p align="center">
   <img src="https://user-images.githubusercontent.com/74038190/216656972-9c6f2e8e-12d7-4a9b-8f07-5aefc6c0b7a6.gif" width="100%" />
