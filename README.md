@@ -1,6 +1,6 @@
 <!-- ================= HERO ================= -->
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/95478989/198955082-6e78ebb5-e1e4-49f9-8d32-6e5af3984dcd.gif" width="900" />
+  <img src="https://user-images.githubusercontent.com/95478989/198955082-6e78ebb5-e1e4-49f9-8d32-6e5af3984dcd.gif" width="100%" style="max-width:900px;" />
 </p>
 
 <h1 align="center">🚩 Jai Shree Ram 🚩</h1>
@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-  <a href="https://vanshgupta11.netlify.app">
+  <a href="https://aboutvansh.vercel.app">
     <img src="https://img.shields.io/badge/Portfolio-12100E?style=for-the-badge" />
   </a>
   <a href="mailto:vanshgupta7668@gmail.com">
@@ -30,16 +30,24 @@
 
 ## 🚀 About Me
 
-<img align="right" width="420" height="300" src="https://res.cloudinary.com/dq7ndlhvf/image/upload/v1768563820/converted_2_cha0ry.gif"/>
+<table>
+<tr>
+<td width="60%" valign="top">
 
-I’m a **full-stack engineer** focused on building **scalable, <br/>
-          maintainable, and performance-driven systems**.
+I'm a **full-stack engineer** focused on building **scalable, maintainable, and performance-driven systems**.
 
 - 🔭 Strong emphasis on **engineering best practices**
 - 🌱 Actively studying **system design & distributed systems**
 - 🧠 Prefer **clarity, simplicity, and correctness** over shortcuts
-- ⚙️ Experience across frontend, backend, Devops
+- ⚙️ Experience across frontend, backend, and DevOps
 - 🚀 Always learning, always refining fundamentals
+
+</td>
+<td width="40%" valign="top">
+<img width="100%" src="https://res.cloudinary.com/dq7ndlhvf/image/upload/v1768563820/converted_2_cha0ry.gif"/>
+</td>
+</tr>
+</table>
 
 <!-- ================= DIVIDER ================= -->
 <p align="center">
@@ -66,20 +74,12 @@ I’m a **full-stack engineer** focused on building **scalable, <br/>
 <p align="center">
   <img src="https://user-images.githubusercontent.com/74038190/216656972-9c6f2e8e-12d7-4a9b-8f07-5aefc6c0b7a6.gif" width="100%" />
 </p>
-<!-- ================= DIVIDER ================= -->
+
+## 📊 GitHub Stats
+
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/74038190/216656972-9c6f2e8e-12d7-4a9b-8f07-5aefc6c0b7a6.gif" width="100%" />
-</p>
-
-
-
-<!-- <p align="center"> -->
-<!-- <img src="https://github-readme-activity-graph.vercel.app/graph?username=goyalvansh4&theme=react-dark&hide_border=true" /> -->
-<!-- </p> -->
-
-<!-- ================= DIVIDER ================= -->
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/74038190/216656972-9c6f2e8e-12d7-4a9b-8f07-5aefc6c0b7a6.gif" width="100%" />
+  <img width="49%" src="./profile/stats.svg" />
+  <img width="49%" src="./profile/top-langs.svg" />
 </p>
 
 <!-- ================= DIVIDER ================= -->
@@ -90,7 +90,7 @@ I’m a **full-stack engineer** focused on building **scalable, <br/>
 ## ✍️ Developer Thought
 
 <p align="center">
-  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical"/>
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical" width="100%" style="max-width:600px;"/>
 </p>
 
 <!-- ================= DIVIDER ================= -->
