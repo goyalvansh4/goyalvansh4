@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430" role="img" aria-labelledby="t">
+<title id="t">Selected engineering missions</title>
+<rect width="1200" height="430" rx="22" fill="#172033"/>
+<g font-family="Inter,Arial,sans-serif">
+ <text x="38" y="43" fill="#FF754A" font-size="11" font-weight="800" letter-spacing="2">SELECTED BUILDS / FIELD NOTES</text>
+ <text x="38" y="80" fill="#FFF3DF" font-size="28" font-weight="850">Things I've put into the world.</text>
+</g>
+<g transform="translate(38 112)">
+ <rect width="1124" height="62" rx="12" fill="#FFF3DF"/>
+ <rect width="8" height="62" rx="4" fill="#FF754A"/>
+ <text x="26" y="25" font-family="Inter,Arial" font-size="10" font-weight="800" letter-spacing="1.2" fill="#FF754A">BUILD / 01</text>
+ <text x="26" y="46" font-family="Inter,Arial" font-size="17" font-weight="850" fill="#172033">GODEVELOPERS</text>
+ <text x="450" y="37" font-family="Inter,Arial" font-size="12" fill="#172033">Developer ecosystem · Learning · Contribution</text>
+ <text x="1080" y="38" text-anchor="end" font-family="Inter,Arial" font-size="11" font-weight="800" fill="#FF754A">OPEN ↗</text>
+</g><g transform="translate(38 188)">
+ <rect width="1124" height="62" rx="12" fill="#FFF3DF"/>
+ <rect width="8" height="62" rx="4" fill="#FF754A"/>
+ <text x="26" y="25" font-family="Inter,Arial" font-size="10" font-weight="800" letter-spacing="1.2" fill="#FF754A">BUILD / 02</text>
+ <text x="26" y="46" font-family="Inter,Arial" font-size="17" font-weight="850" fill="#172033">FAIRSHARE</text>
+ <text x="450" y="37" font-family="Inter,Arial" font-size="12" fill="#172033">Shared expenses · Group balances · Settlements</text>
+ <text x="1080" y="38" text-anchor="end" font-family="Inter,Arial" font-size="11" font-weight="800" fill="#FF754A">OPEN ↗</text>
+</g><g transform="translate(38 264)">
+ <rect width="1124" height="62" rx="12" fill="#FFF3DF"/>
+ <rect width="8" height="62" rx="4" fill="#FF754A"/>
+ <text x="26" y="25" font-family="Inter,Arial" font-size="10" font-weight="800" letter-spacing="1.2" fill="#FF754A">BUILD / 03</text>
+ <text x="26" y="46" font-family="Inter,Arial" font-size="17" font-weight="850" fill="#172033">DSA REAL WORLD</text>
+ <text x="450" y="37" font-family="Inter,Arial" font-size="12" fill="#172033">DSA learning · Contributor workflows</text>
+ <text x="1080" y="38" text-anchor="end" font-family="Inter,Arial" font-size="11" font-weight="800" fill="#FF754A">OPEN ↗</text>
+</g><g transform="translate(38 340)">
+ <rect width="1124" height="62" rx="12" fill="#FFF3DF"/>
+ <rect width="8" height="62" rx="4" fill="#FF754A"/>
+ <text x="26" y="25" font-family="Inter,Arial" font-size="10" font-weight="800" letter-spacing="1.2" fill="#FF754A">BUILD / 04</text>
+ <text x="26" y="46" font-family="Inter,Arial" font-size="17" font-weight="850" fill="#172033">RECAP / STORYCODE</text>
+ <text x="450" y="37" font-family="Inter,Arial" font-size="12" fill="#172033">Programming concepts · Story-led learning</text>
+ <text x="1080" y="38" text-anchor="end" font-family="Inter,Arial" font-size="11" font-weight="800" fill="#FF754A">OPEN ↗</text>
+</g></svg>
