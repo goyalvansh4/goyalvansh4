@@ -2,6 +2,10 @@
 
 <img src="./assets/hero.png" width="100%" alt="Vansh Gupta — The Hustler. I build useful software." />
 
+<br/>
+
+<img src="./assets/id-card.png" width="100%" alt="Developer ID — Vansh Gupta, Full Stack Engineer, Saharanpur. Scan the QR code for the portfolio." />
+
 </div>
 
 ## About
@@ -32,10 +36,8 @@ I'm Vansh — a full stack engineer building products across frontend, backend a
 
 <img src="./assets/outro.gif" width="100%" alt="Thanks for visiting! Let's connect and build something incredible." />
 
-<p>
-  <a href="https://aboutvansh.vercel.app"><b>Portfolio</b></a> ·
-  <a href="https://www.linkedin.com/in/vansh-gupta-b220961b7/"><b>LinkedIn</b></a> ·
-  <a href="mailto:vanshgupta7668@gmail.com"><b>Email</b></a>
-</p>
+<a href="https://aboutvansh.vercel.app"><img src="./assets/btn-portfolio.svg" height="60" alt="Portfolio" /></a>
+<a href="https://www.linkedin.com/in/vansh-gupta-b220961b7/"><img src="./assets/btn-linkedin.svg" height="60" alt="LinkedIn" /></a>
+<a href="mailto:vanshgupta7668@gmail.com"><img src="./assets/btn-email.svg" height="60" alt="Email" /></a>
 
 </div>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="210" height="60" viewBox="0 0 210 60" role="img" aria-label="EMAIL">
+<title>EMAIL</title>
+<style>
+.b{opacity:0;animation:go 9.629s cubic-bezier(.2,.8,.2,1) infinite}
+@keyframes go{0%,50.047%{opacity:0;transform:translateY(16px)}54.72%{opacity:1;transform:translateY(0)}97.819%{opacity:1;transform:translateY(0)}100.415%,100%{opacity:0;transform:translateY(0)}}
+text{font-family:'Segoe UI',Helvetica,Arial,sans-serif;font-weight:800;letter-spacing:1.4px;font-size:14px}
+</style>
+<g class="b">
+<rect x="3" y="4" width="204" height="48" rx="24" fill="#101827" stroke="#FF754A" stroke-width="2"/>
+<g transform="translate(24,16)" fill="none" stroke="#FF754A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m3 7 9 6.5L21 7"/></g>
+<text x="58" y="33" fill="#F5EBDD">EMAIL</text>
+</g></svg>
