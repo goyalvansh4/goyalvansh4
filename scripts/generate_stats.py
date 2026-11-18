@@ -55,37 +55,50 @@ if not ok:  # rate-limited: use each repo's primary language instead (never mix 
 top = langs.most_common(6); total = sum(v for _, v in top) or 1
 
 # ---------- svg helpers ----------
+# Same look as assets/id-card.png: ivory canvas, navy card, coral header strip with a badge slot.
+# Cards are 800px wide with large type so they stay readable when GitHub shrinks them on phones.
+M, R, HDR = 20, 26, 64  # outer margin, corner radius, header height
+
 def card(w, h, title, body):
+    cw, ch = w - 2 * M, h - 2 * M
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-label="{html.escape(title)}">
-<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="0"><stop offset=".35" stop-color="{NAVY}"/><stop offset="1" stop-color="{NAVY2}"/></linearGradient></defs>
+<defs><clipPath id="card"><rect x="{M}" y="{M}" width="{cw}" height="{ch}" rx="{R}"/></clipPath></defs>
 <style>text{{font-family:{FONT}}}
 .in{{animation:in .7s ease-out backwards}}
 @keyframes in{{from{{opacity:0;transform:translateY(10px)}}to{{opacity:1;transform:none}}}}</style>
-<rect x="1" y="1" width="{w-2}" height="{h-2}" rx="26" fill="url(#g)" stroke="{CORAL}" stroke-width="2"/>
-<rect x="1" y="1" width="{w-2}" height="54" rx="26" fill="{CORAL}"/><rect x="1" y="28" width="{w-2}" height="27" fill="{CORAL}"/>
-<text x="32" y="35" font-size="17" font-weight="800" letter-spacing="3" fill="{NAVY}">{html.escape(title)}</text>
-<text x="{w-32}" y="35" font-size="17" font-weight="800" letter-spacing="3" fill="{NAVY}" text-anchor="end">{html.escape(USER.upper())}</text>
+<rect width="{w}" height="{h}" fill="{IVORY}"/>
+<g clip-path="url(#card)"><rect x="{M}" y="{M}" width="{cw}" height="{ch}" fill="{NAVY}"/><rect x="{M}" y="{M}" width="{cw}" height="{HDR}" fill="{CORAL}"/></g>
+<rect x="{w/2-45:.0f}" y="{M+HDR/2-7:.0f}" width="90" height="14" rx="7" fill="{NAVY}"/>
+<text x="{M+28}" y="{M+HDR/2+7:.0f}" font-size="20" font-weight="800" letter-spacing="3" fill="{NAVY}">{html.escape(title)}</text>
+<text x="{w-M-28}" y="{M+HDR/2+7:.0f}" font-size="20" font-weight="800" letter-spacing="3" fill="{NAVY}" text-anchor="end">{html.escape(USER.upper())}</text>
 {body}</svg>'''
 
-# ---------- stats card ----------
+W = 800; X0, X1 = M + 28, W - M - 28  # content edges
+TOP = M + HDR                           # body starts here
+
+# ---------- stats card: 3 x 2 grid ----------
 items = [("STARS", stars), ("COMMITS", commits), ("PULL REQUESTS", prs), ("ISSUES", issues), ("REPOSITORIES", n_repos), ("FOLLOWERS", followers)]
-W, H = 1200, 230; colw = (W - 64) / len(items); body = ""
+H = TOP + 262 + M; colw = (X1 - X0) / 3; rowh = 124; body = ""
 for i, (lab, val) in enumerate(items):
-    x = 32 + colw * i + colw / 2
-    body += f'<g class="in" style="animation-delay:{i*0.12:.2f}s"><text x="{x:.0f}" y="146" font-size="52" font-weight="800" fill="{IVORY}" text-anchor="middle">{fmt(val)}</text>'
-    body += f'<text x="{x:.0f}" y="182" font-size="13" font-weight="800" letter-spacing="2.5" fill="{CORAL}" text-anchor="middle">{lab}</text></g>'
-    if i: body += f'<line x1="{32+colw*i:.0f}" y1="100" x2="{32+colw*i:.0f}" y2="190" stroke="{IVORY}" stroke-opacity=".15"/>'
+    c, r = i % 3, i // 3
+    x = X0 + colw * c + colw / 2; y = TOP + 22 + r * rowh
+    body += f'<g class="in" style="animation-delay:{i*0.12:.2f}s"><text x="{x:.0f}" y="{y+30}" font-size="18" font-weight="800" letter-spacing="3" fill="{CORAL}" text-anchor="middle">{lab}</text>'
+    body += f'<text x="{x:.0f}" y="{y+94}" font-size="60" font-weight="800" fill="{IVORY}" text-anchor="middle">{fmt(val)}</text></g>'
+for c in (1, 2):
+    body += f'<line x1="{X0+colw*c:.0f}" y1="{TOP+30}" x2="{X0+colw*c:.0f}" y2="{TOP+240}" stroke="{IVORY}" stroke-opacity=".15"/>'
+body += f'<line x1="{X0}" y1="{TOP+22+rowh-8}" x2="{X1}" y2="{TOP+22+rowh-8}" stroke="{IVORY}" stroke-opacity=".15"/>'
 open("profile/stats.svg", "w").write(card(W, H, "GITHUB STATS", body))
 
-# ---------- top languages card ----------
-H2 = 250; bx, bw = 32, W - 64; x = bx; bar = f'<clipPath id="c"><rect x="{bx}" y="92" width="{bw}" height="22" rx="11"/></clipPath><g clip-path="url(#c)">'
+# ---------- top languages card: bar + 2-column legend ----------
+bw = X1 - X0; x = X0; by = TOP + 32
+bar = f'<clipPath id="bar"><rect x="{X0}" y="{by}" width="{bw}" height="26" rx="13"/></clipPath><g clip-path="url(#bar)">'
 for i, (n, v) in enumerate(top):
-    w = bw * v / total; bar += f'<rect x="{x:.1f}" y="92" width="{w:.1f}" height="22" fill="{LANG_COLORS[i]}"/>'; x += w
+    w = bw * v / total; bar += f'<rect x="{x:.1f}" y="{by}" width="{w:.1f}" height="26" fill="{LANG_COLORS[i]}"/>'; x += w
 bar += "</g>"
-leg = ""
-cols = 3; cw2 = bw / cols
+leg = ""; cols = 2; cw2 = bw / cols; rows = (len(top) + cols - 1) // cols
 for i, (n, v) in enumerate(top):
-    lx = bx + (i % cols) * cw2; ly = 160 + (i // cols) * 44
-    leg += f'<g class="in" style="animation-delay:{i*0.1:.1f}s"><circle cx="{lx+8:.0f}" cy="{ly-6}" r="7" fill="{LANG_COLORS[i]}"/><text x="{lx+26:.0f}" y="{ly}" font-size="18" font-weight="700" fill="{IVORY}">{html.escape(n)}</text><text x="{lx+cw2-24:.0f}" y="{ly}" font-size="18" font-weight="800" fill="{CORAL}" text-anchor="end">{v/total*100:.1f}%</text></g>'
+    lx = X0 + (i % cols) * cw2; ly = by + 84 + (i // cols) * 50
+    leg += f'<g class="in" style="animation-delay:{i*0.1:.1f}s"><circle cx="{lx+10:.0f}" cy="{ly-8}" r="9" fill="{LANG_COLORS[i]}"/><text x="{lx+32:.0f}" y="{ly}" font-size="24" font-weight="700" fill="{IVORY}">{html.escape(n)}</text><text x="{lx+cw2-(28 if i % cols == 0 else 0):.0f}" y="{ly}" font-size="24" font-weight="800" fill="{CORAL}" text-anchor="end">{v/total*100:.1f}%</text></g>'
+H2 = by + 84 + (rows - 1) * 50 + 34 + M
 open("profile/top-langs.svg", "w").write(card(W, H2, "TOP LANGUAGES", bar + leg))
 print("stats:", dict(items), "langs:", top)
