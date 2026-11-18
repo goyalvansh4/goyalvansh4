@@ -1,0 +1,4 @@
+1. Extract into your GitHub profile repo (goyalvansh4/goyalvansh4).
+2. Replace README.md and upload the assets/ folder (hero.png, outro.gif).
+3. Keep your existing profile/stats.svg and profile/top-langs.svg.
+4. Commit and push. (GitHub caches images - hard refresh if the old one shows.)
