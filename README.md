@@ -59,12 +59,8 @@
 
 <div align="center">
   <picture>
-    <source media="(max-width: 600px)" srcset="./profile/stats-m.svg" />
-    <img src="./profile/stats.svg" width="100%" alt="GitHub statistics" />
-  </picture>
-  <picture>
-    <source media="(max-width: 600px)" srcset="./profile/top-langs-m.svg" />
-    <img src="./profile/top-langs.svg" width="100%" alt="Top languages" />
+    <source media="(max-width: 600px)" srcset="./profile/github-m.svg" />
+    <img src="./profile/github.svg" width="100%" alt="GitHub stats and top languages" />
   </picture>
 </div>
 

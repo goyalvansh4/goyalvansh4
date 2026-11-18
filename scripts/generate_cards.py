@@ -4,7 +4,7 @@ in desktop (file.svg) and mobile (file-m.svg) sizes, using the tokens in scripts
 Usage: python scripts/generate_cards.py
 """
 import datetime, html
-from theme import SIZES, frame, NAVY, CORAL, SAFFRON, IVORY, FONT, FONT_CSS
+from theme import SIZES, frame, NAVY, CORAL, SAFFRON, IVORY, SOFT, CREAM, INK, FONT, FONT_CSS
 
 WORK = [
     ("godevelopers", "GoDevelopers", "Developer ecosystem to learn & contribute"),
@@ -45,45 +45,50 @@ def arrow(cx, cy, r):
     s = r / 28
     return (f'<circle cx="{cx:.0f}" cy="{cy:.0f}" r="{r:.0f}" fill="{CORAL}"/>'
             f'<path transform="translate({cx:.0f},{cy:.0f}) scale({s:.2f})" d="M-9 9 L9 -9 M-3 -9 H9 V3" fill="none" '
-            f'stroke="{NAVY}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>')
-
-
-def follow_pill(x, y, t):
-    hd = t["HEAD"]; ph = hd * 2.8; pw = hd * 17; s = hd / 20
-    return (f'<rect x="{x-pw:.0f}" y="{y:.0f}" width="{pw:.0f}" height="{ph:.0f}" rx="{ph/2:.0f}" fill="{CORAL}"/>'
-            f'<g transform="translate({x-pw+hd*1.3:.0f},{y+ph/2-12*s:.0f}) scale({s:.2f})" fill="none" stroke="{NAVY}" stroke-width="2.4" '
-            f'stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="4"/><path d="M2 21c0-4 3-7 7-7s7 3 7 7M19 7v6M16 10h6"/></g>'
-            f'<text x="{x-pw+hd*3.1:.0f}" y="{y+ph/2+hd*0.36:.0f}" font-size="{hd}" letter-spacing="3" fill="{NAVY}">FOLLOW FOR MORE</text>'), ph
+            f'stroke="{NAVY}" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>')
 
 
 today = datetime.date.today()
 thought = THOUGHTS[today.toordinal() % len(THOUGHTS)]
 
 for kind, t in SIZES.items():
-    M, X0, X1, L, B, T = t["M"], t["X0"], t["X1"], t["LABEL"], t["BODY"], t["TITLE"]
+    X0, X1, L, B, T, P, W = t["X0"], t["X1"], t["LABEL"], t["BODY"], t["TITLE"], t["PAD"], t["W"]
+    desk = kind == "desktop"
 
-    # ---- selected work: one linked card per project ----
-    yl = M + 22 + L; yt = yl + T * 1.25; yd = yt + B * 1.45; H = round(yd + 24 + M)
+    # ---- selected work: number + name + description + arrow (no header, so it reads differently) ----
+    dx = X0 + T * 2.4; tx = dx + T * 0.8; ar = T * 0.9   # number | divider | text
     for i, (slug, name, desc) in enumerate(WORK):
-        inner = (f'<rect x="{M}" y="{M}" width="10" height="{H-2*M}" fill="{CORAL}" clip-path="url(#card)"/>'
-                 f'<text x="{X0}" y="{yl:.0f}" font-size="{L}" letter-spacing="3" fill="{CORAL}">PROJECT {i+1:02d}</text>'
-                 f'<text x="{X0}" y="{yt:.0f}" font-size="{T}" fill="{IVORY}">{html.escape(name)}</text>'
-                 f'<text x="{X0}" y="{yd:.0f}" font-size="{B}" font-weight="600" fill="{SAFFRON}">{html.escape(desc)}</text>'
-                 + arrow(X1 - T * 0.875, H / 2, T * 0.875))
-        open(f"assets/work-{slug}{t['suffix']}.svg", "w").write(frame(t, H, f"{name} — {desc}", inner, delay=i * 0.12))
+        lines = wrap(desc, 200 if desk else 32)
+        yt = P + T * 0.95; yd = yt + 10 + B
+        h = round(yd + (len(lines) - 1) * B * 1.45 + P - 2)
+        inner = (f'<text x="{X0}" y="{h/2+T*0.55:.0f}" font-size="{T*1.6:.0f}" fill="{CORAL}">{i+1:02d}</text>'
+                 f'<line x1="{dx:.0f}" y1="{P}" x2="{dx:.0f}" y2="{h-P}" stroke="{IVORY}" stroke-opacity=".12"/>'
+                 f'<text x="{tx:.0f}" y="{yt:.0f}" font-size="{T}" fill="{IVORY}">{html.escape(name)}</text>'
+                 + "".join(f'<text x="{tx:.0f}" y="{yd+j*B*1.45:.0f}" font-size="{B}" font-weight="600" fill="{SOFT}">{html.escape(l)}</text>' for j, l in enumerate(lines))
+                 + arrow(X1 - ar, h / 2, ar))
+        open(f"assets/work-{slug}{t['suffix']}.svg", "w").write(frame(t, h, f"{name} — {desc}", inner, delay=i * 0.1))
 
-    # ---- tech thought of the day (rotates daily via the workflow) ----
-    TOP = t["TOP"]; lines = wrap(thought, 56 if kind == "desktop" else 30)
-    qx = X0 + T * 2; first = TOP + T * 2.06
-    inner = f'<text x="{X0-4}" y="{TOP+T*3.1:.0f}" font-size="{T*3}" fill="{CORAL}">&#8220;</text>'
-    inner += "".join(f'<text x="{qx:.0f}" y="{first+i*T*1.4:.0f}" font-size="{T}" fill="{IVORY}">{html.escape(l)}</text>' for i, l in enumerate(lines))
-    by = first + (len(lines) - 1) * T * 1.4 + T
-    pill, ph = follow_pill(X1, by, t)
-    inner += f'<text x="{qx:.0f}" y="{by+ph/2+L*0.37:.0f}" font-size="{L}" letter-spacing="3" fill="{SAFFRON}">— THE HUSTLER</text>' + pill
-    H = round(by + ph + 24 + M)
+    # ---- tech thought of the day: cream card styled like the hero banner (rotates daily via the workflow) ----
+    lines = wrap(thought, 52 if desk else 26)
+    cr = 100 if desk else 64; ccx, ccy = W - (50 if desk else 30), -40 if desk else -30
+    deco = (f'<g clip-path="url(#card)"><circle cx="{ccx}" cy="{ccy}" r="{cr}" fill="{CORAL}"/>'
+            f'<circle cx="{ccx}" cy="{ccy}" r="{cr*1.45:.0f}" fill="none" stroke="{CORAL}" stroke-opacity=".55" stroke-width="1.5"/></g>')
+    yl = P + L; fs = L / 13
+    flag = (f'<path transform="translate({X0},{yl-L*0.95:.0f}) scale({fs:.2f})" d="M1 0v16M1 1h11l-3 4 3 4H1" '
+            f'fill="{SAFFRON}" stroke="{SAFFRON}" stroke-width="2" stroke-linejoin="round"/>')
+    inner = deco + flag + (
+        f'<text x="{X0+L*1.6:.0f}" y="{yl}" font-size="{L}" letter-spacing="1.5" fill="{SAFFRON}">TECH THOUGHT</text>'
+        f'<text x="{X1}" y="{yl}" font-size="{L}" letter-spacing="1.5" fill="{INK}" text-anchor="end">{today.strftime("%d %b %Y").upper()}</text>')
+    qs = round(T * 1.2); yq = yl + 16 + qs
+    inner += "".join(f'<text x="{X0}" y="{yq+j*qs*1.3:.0f}" font-size="{qs}" fill="{INK}">{html.escape(l)}</text>' for j, l in enumerate(lines))
+    ph = t["HEAD"] * 2.6; pw = t["HEAD"] * 13.5; py = yq + (len(lines) - 1) * qs * 1.3 + 18
+    inner += (f'<text x="{X0}" y="{py+ph/2+L*0.36:.0f}" font-size="{L}" letter-spacing="1.5" fill="{CORAL}">— THE HUSTLER</text>'
+              f'<rect x="{X1-pw:.0f}" y="{py:.0f}" width="{pw:.0f}" height="{ph:.0f}" rx="{ph/2:.0f}" fill="{CORAL}"/>'
+              f'<text x="{X1-pw/2:.0f}" y="{py+ph/2+t["HEAD"]*0.36:.0f}" font-size="{t["HEAD"]}" letter-spacing="1.5" fill="{INK}" text-anchor="middle">FOLLOW FOR MORE</text>')
+    h = round(py + ph + P)
     open(f"assets/thought{t['suffix']}.svg", "w").write(
-        frame(t, H, f"Tech thought: {thought} — The Hustler. Follow for more.", inner,
-              header=("TECH THOUGHT", today.strftime("%d %b %Y").upper()), delay=5.2))
+        frame(t, h, f"Tech thought: {thought} — The Hustler. Follow for more.", inner, delay=5.2,
+              fill=CREAM, stroke=INK, stroke_opacity="1"))
 
 # ---- contact buttons (icon + label centred; widths measured for Poppins Bold 14px, letter-spacing .8) ----
 ICONS = {
