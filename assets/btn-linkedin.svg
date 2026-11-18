@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="210" height="60" viewBox="0 0 210 60" role="img" aria-label="LINKEDIN">
 <title>LINKEDIN</title>
 <style>
-.b{opacity:0;animation:go 9.629s cubic-bezier(.2,.8,.2,1) infinite}
-@keyframes go{0%,46.931%{opacity:0;transform:translateY(16px)}51.605%{opacity:1;transform:translateY(0)}97.819%{opacity:1;transform:translateY(0)}100.415%,100%{opacity:0;transform:translateY(0)}}
+.b{animation:rise .9s cubic-bezier(.22,.8,.3,1) 4.52s backwards}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 text{font-family:'Segoe UI',Helvetica,Arial,sans-serif;font-weight:800;letter-spacing:1.4px;font-size:14px}
 </style>
 <g class="b">

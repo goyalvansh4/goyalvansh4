@@ -4,13 +4,15 @@
 
 <br/>
 
-<img src="./assets/id-card.png" width="100%" alt="Developer ID — Vansh Gupta, Full Stack Engineer, Saharanpur. Scan the QR code for the portfolio." />
+
 
 </div>
 
 ## About
 
-I'm Vansh — a full stack engineer building products across frontend, backend and infrastructure. I enjoy turning real problems into reliable software, with thoughtful architecture and clean execution.
+<div align="center">
+  <img src="./assets/id-card.png" width="100%" alt="Developer ID — Vansh Gupta, Full Stack Engineer, Saharanpur. Scan the QR code for the portfolio." />
+</div>
 
 ## Selected work
 

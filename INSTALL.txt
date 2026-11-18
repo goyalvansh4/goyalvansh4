@@ -1,4 +1,6 @@
-1. Extract into your GitHub profile repo (goyalvansh4/goyalvansh4).
-2. Replace README.md and upload the assets/ folder (hero.png, outro.gif).
-3. Keep your existing profile/stats.svg and profile/top-langs.svg.
-4. Commit and push. (GitHub caches images - hard refresh if the old one shows.)
+1. Extract into your profile repo (goyalvansh4/goyalvansh4); keep folder structure.
+2. README.md, assets/, profile/ (stats.svg, top-langs.svg) replace the old ones.
+3. scripts/generate_stats.py + .github/workflows/stats.yml regenerate the themed
+   cards every 12h with real data. If you already have a stats workflow, delete it
+   (or replace it with this one) so the two don't overwrite each other.
+4. Commit, push, then Actions tab -> "Update profile stats" -> Run workflow once.
