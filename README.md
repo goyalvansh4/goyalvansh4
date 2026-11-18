@@ -23,10 +23,30 @@
 ## Selected work
 
 <div align="center">
-  <a href="https://godevelopers.space/"><img src="./assets/work-godevelopers.svg" width="100%" alt="GoDevelopers — Developer ecosystem for learning and real-world contribution." /></a>
-  <a href="https://fairshare.guptavansh5747.workers.dev/"><img src="./assets/work-fairshare.svg" width="100%" alt="FairShare — Shared expenses, balances and group settlements." /></a>
-  <a href="https://dsa-real-world.lovable.app/"><img src="./assets/work-dsa-real-world.svg" width="100%" alt="DSA Real World — DSA learning and contributor workflows." /></a>
-  <a href="https://recap.godevelopes.space/"><img src="./assets/work-recap.svg" width="100%" alt="Recap / StoryCode — Programming concepts through stories." /></a>
+  <a href="https://godevelopers.space/">
+    <picture>
+      <source media="(max-width: 600px)" srcset="./assets/work-godevelopers-m.svg" />
+      <img src="./assets/work-godevelopers.svg" width="100%" alt="GoDevelopers — Developer ecosystem for learning and real-world contribution." />
+    </picture>
+  </a>
+  <a href="https://fairshare.guptavansh5747.workers.dev/">
+    <picture>
+      <source media="(max-width: 600px)" srcset="./assets/work-fairshare-m.svg" />
+      <img src="./assets/work-fairshare.svg" width="100%" alt="FairShare — Shared expenses, balances and group settlements." />
+    </picture>
+  </a>
+  <a href="https://dsa-real-world.lovable.app/">
+    <picture>
+      <source media="(max-width: 600px)" srcset="./assets/work-dsa-real-world-m.svg" />
+      <img src="./assets/work-dsa-real-world.svg" width="100%" alt="DSA Real World — DSA learning and contributor workflows." />
+    </picture>
+  </a>
+  <a href="https://recap.godevelopes.space/">
+    <picture>
+      <source media="(max-width: 600px)" srcset="./assets/work-recap-m.svg" />
+      <img src="./assets/work-recap.svg" width="100%" alt="Recap / StoryCode — Programming concepts through stories." />
+    </picture>
+  </a>
 </div>
 
 ## Stack
@@ -38,8 +58,14 @@
 ## GitHub
 
 <div align="center">
-  <img src="./profile/stats.svg" width="100%" alt="GitHub statistics" />
-  <img src="./profile/top-langs.svg" width="100%" alt="Top languages" />
+  <picture>
+    <source media="(max-width: 600px)" srcset="./profile/stats-m.svg" />
+    <img src="./profile/stats.svg" width="100%" alt="GitHub statistics" />
+  </picture>
+  <picture>
+    <source media="(max-width: 600px)" srcset="./profile/top-langs-m.svg" />
+    <img src="./profile/top-langs.svg" width="100%" alt="Top languages" />
+  </picture>
 </div>
 
 <div align="center">
@@ -51,7 +77,11 @@
 <a href="mailto:vanshgupta7668@gmail.com"><img src="./assets/btn-email.svg" height="36" alt="Email" /></a>
 
 <br/><br/>
-
-<a href="https://github.com/goyalvansh4"><img src="./assets/thought.svg" width="100%" alt="Tech thought of the day by the Hustler — follow for more." /></a>
+  <a href="https://github.com/goyalvansh4">
+    <picture>
+      <source media="(max-width: 600px)" srcset="./assets/thought-m.svg" />
+      <img src="./assets/thought.svg" width="100%" alt="Tech thought of the day by the Hustler — follow for more." />
+    </picture>
+  </a>
 
 </div>
