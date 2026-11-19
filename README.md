@@ -35,7 +35,7 @@
       <img src="./assets/work-dsa-real-world.svg" width="100%" alt="DSA Real World — DSA learning and contributor workflows." />
     </picture>
   </a>
-  <a href="https://recap.godevelopes.space/">
+  <a href="https://recap.godevelopers.space/">
     <picture>
       <source media="(max-width: 600px)" srcset="./assets/work-recap-m.svg" />
       <img src="./assets/work-recap.svg" width="100%" alt="Recap / StoryCode — Programming concepts through stories." />
