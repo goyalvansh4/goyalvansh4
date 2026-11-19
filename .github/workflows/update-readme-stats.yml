@@ -2,7 +2,10 @@ name: Update README cards
 
 on:
   schedule:
-    - cron: "0 0 * * *" # Runs once daily at midnight UTC
+    # 00:00 IST (18:30 UTC) so the date + thought flip right after 11:59 PM India time.
+    # Second slot is a safety net: GitHub sometimes delays/skips scheduled runs; a repeat run is a no-op.
+    - cron: "30 18 * * *"
+    - cron: "15 20 * * *"
   workflow_dispatch: # Lets you trigger it manually from the Actions tab
 
 jobs:

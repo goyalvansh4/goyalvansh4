@@ -4,10 +4,10 @@ in desktop (file.svg) and mobile (file-m.svg) sizes, using the tokens in scripts
 Usage: python scripts/generate_cards.py
 """
 import datetime, html
+from zoneinfo import ZoneInfo
 from theme import SIZES, frame, NAVY, CORAL, SAFFRON, IVORY, SOFT, CREAM, INK, FONT, FONT_CSS
 
 WORK = [
-    ("godevelopers", "GoDevelopers", "Developer ecosystem to learn & contribute"),
     ("fairshare", "FairShare", "Shared expenses, balances & settlements"),
     ("dsa-real-world", "DSA Real World", "DSA learning & contributor workflows"),
     ("recap", "Recap / StoryCode", "Programming concepts through stories"),
@@ -48,7 +48,21 @@ def arrow(cx, cy, r):
             f'stroke="{NAVY}" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>')
 
 
-today = datetime.date.today()
+def date_chip(x, base, L, label):
+    fs = L - 1; h = fs * 1.9; w = sum(0.3 if c in " ·:" else 0.62 for c in label) * fs + len(label) * 1.2 + fs * 1.6; y = base - fs * 0.36 - h / 2
+    return (f'<rect x="{x:.0f}" y="{y:.1f}" width="{w:.0f}" height="{h:.0f}" rx="{h/2:.0f}" fill="{INK}" fill-opacity=".06" '
+            f'stroke="{INK}" stroke-opacity=".28"/>'
+            f'<text x="{x+w/2:.0f}" y="{base-0.5:.1f}" font-size="{fs}" letter-spacing="1.2" fill="{INK}" text-anchor="middle">{label}</text>')
+
+
+# India time: the card flips right after 11:59 PM IST (the workflow runs at 00:00 IST = 18:30 UTC)
+now = datetime.datetime.now(ZoneInfo("Asia/Kolkata")); today = now.date()
+def stamp(desk):
+    """Date + time of this update in IST, e.g. "19 NOV 2026 · 12:00 AM IST" (shorter on mobile)."""
+    t = now.strftime("%I:%M %p").lstrip("0")
+    return (now.strftime("%d %b %Y") + f" · {t} IST" if desk else now.strftime("%d %b") + f" · {t}").upper()
+
+
 thought = THOUGHTS[today.toordinal() % len(THOUGHTS)]
 
 for kind, t in SIZES.items():
@@ -70,7 +84,7 @@ for kind, t in SIZES.items():
 
     # ---- tech thought of the day: cream card styled like the hero banner (rotates daily via the workflow) ----
     lines = wrap(thought, 52 if desk else 26)
-    cr = 100 if desk else 64; ccx, ccy = W - (50 if desk else 30), -40 if desk else -30
+    cr = 100 if desk else 56; ccx, ccy = W - (50 if desk else 24), -40 if desk else -30
     deco = (f'<g clip-path="url(#card)"><circle cx="{ccx}" cy="{ccy}" r="{cr}" fill="{CORAL}"/>'
             f'<circle cx="{ccx}" cy="{ccy}" r="{cr*1.45:.0f}" fill="none" stroke="{CORAL}" stroke-opacity=".55" stroke-width="1.5"/></g>')
     yl = P + L; fs = L / 13
@@ -78,7 +92,8 @@ for kind, t in SIZES.items():
             f'fill="{SAFFRON}" stroke="{SAFFRON}" stroke-width="2" stroke-linejoin="round"/>')
     inner = deco + flag + (
         f'<text x="{X0+L*1.6:.0f}" y="{yl}" font-size="{L}" letter-spacing="1.5" fill="{SAFFRON}">TECH THOUGHT</text>'
-        f'<text x="{X1}" y="{yl}" font-size="{L}" letter-spacing="1.5" fill="{INK}" text-anchor="end">{today.strftime("%d %b %Y").upper()}</text>')
+        # date chip sits right after the label, clear of the coral corner decoration
+        + date_chip(X0 + L*1.6 + L*10.6, yl, L, stamp(desk)))
     qs = round(T * 1.2); yq = yl + 16 + qs
     inner += "".join(f'<text x="{X0}" y="{yq+j*qs*1.3:.0f}" font-size="{qs}" fill="{INK}">{html.escape(l)}</text>' for j, l in enumerate(lines))
     ph = t["HEAD"] * 2.6; pw = t["HEAD"] * 13.5; py = yq + (len(lines) - 1) * qs * 1.3 + 18

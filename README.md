@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(max-width: 600px)" srcset="./assets/hero-mobile.png" />
-  <img src="./assets/hero.png" width="100%" alt="Vansh Gupta — The Hustler. Build useful software. Build. Break. Ship. Restart." />
+  <source media="(max-width: 600px)" srcset="./assets/hero-mobile.gif" />
+  <img src="./assets/hero.gif" width="100%" alt="Vansh Gupta — The Hustler. Build useful software. Build. Break. Ship. Restart." />
 </picture>
 
 <br/>
@@ -23,12 +23,6 @@
 ## Selected work
 
 <div align="center">
-  <a href="https://godevelopers.space/">
-    <picture>
-      <source media="(max-width: 600px)" srcset="./assets/work-godevelopers-m.svg" />
-      <img src="./assets/work-godevelopers.svg" width="100%" alt="GoDevelopers — Developer ecosystem for learning and real-world contribution." />
-    </picture>
-  </a>
   <a href="https://fairshare.guptavansh5747.workers.dev/">
     <picture>
       <source media="(max-width: 600px)" srcset="./assets/work-fairshare-m.svg" />
@@ -52,7 +46,7 @@
 ## Stack
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=js,ts,cpp,python,react,nextjs,tailwind,nodejs,nestjs,graphql,postgres,mongodb,redis,prisma,docker,aws,cloudflare&perline=8&theme=dark" alt="Tech stack" />
+  <img src="https://skillicons.dev/icons?i=js,ts,cpp,python,react,nextjs,tailwind,nodejs,nestjs,graphql,postgres,mongodb,redis,docker,aws,cloudflare&perline=8&theme=dark" alt="Tech stack" />
 </p>
 
 ## GitHub
